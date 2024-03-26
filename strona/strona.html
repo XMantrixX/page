@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Podróże Światem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<script>
+        document.getElementById('opinia-formularz').addEventListener('submit', dodajOpinie);
+
+        function dodajOpinie(event) {
+			event.preventDefault();
+			var opinia = document.getElementById('opinia').value;
+			var lista = document.getElementById('opinie-lista');
+			var nowaOpinia = document.createElement('div');
+			nowaOpinia.className = 'opinia';
+			nowaOpinia.textContent = opinia;
+			lista.appendChild(nowaOpinia);
+			document.getElementById('opinia').value = '';
+		}
+
+    </script>
+
+
+    <header>
+        <h1>Podróże Światem</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#kierunki">Kierunki</a></li>
+                <li><a href="#uslugi">Nasze Usługi</a></li>
+                <li><a href="#opinie">Opinie Klientów</a></li>
+                <li><a href="#porady">Porady</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>O nas</h2>
+        <p>Witaj na stronie Podróże Światem! Jesteśmy pasjonatami podróży i dzielimy się z Tobą naszymi doświadczeniami oraz poradami.</p>
+    </section>
+
+    <section id="kierunki">
+        <h2>Kierunki</h2>
+        <div class="kierunki">
+            <img src="img/paryz.jpg" alt="Paryż">
+            <h3>Paryż, Francja</h3>
+            <p>Spacerując po romantycznych uliczkach Paryża, możesz zanurzyć się w bogatej kulturze, historii i kuchni francuskiej.</p>
+            <p>Odwiedź również wieże Notre-Dame, Muzeum Luwru i posmakuj wykwintnych francuskich potraw w lokalnych restauracjach.</p>
+        </div>
+        
+        <div class="kierunki">
+            <img src="img/rzym.jpg" alt="Rzym">
+            <h3>Rzym, Włochy</h3>
+            <p>Rzym to miasto pełne historii i zabytków, które zapiera dech w piersiach. Możesz zwiedzać Koloseum, Watykan i wiele innych miejsc.</p>
+            <p>Nie zapomnij spróbować prawdziwej włoskiej pizzy i gelato!</p>
+        </div>
+		
+		 <div class="kierunki">
+			<img src="img/londyn.jpg" alt="Londyn">
+			<h3>Londyn, Wielka Brytania</h3>
+			<p>Londyn to miasto, które oferuje wiele atrakcji, w tym Buckingham Palace, Tower Bridge i British Museum. Prócz tego, Londyn to również świetne miejsce na zakupy i kulturalne wydarzenia.</p>
+		</div>
+
+		<div class="kierunki">
+			<img src="img/tokio.jpg" alt="Tokio">
+			<h3>Tokio, Japonia</h3>
+			<p>Tokio to dynamiczne miasto, które łączy nowoczesność z tradycją. Możesz zwiedzać wieżę Tokyo Skytree, świątynię Sensō-ji i cieszyć się różnorodną kuchnią japońską.</p>
+		</div>
+		
+    </section>
+
+    <section id="uslugi" class="sekcja-ramka">
+		<h2>Nasze Usługi:</h2>
+		<ul>
+			<li>Organizacja wycieczek grupowych</li>
+			<li>Indywidualne planowanie podróży</li>
+			<li>Rezerwacje noclegów i transportu</li>
+			<li>Doradztwo wizowe i ubezpieczeniowe</li>
+		</ul>
+	</section>
+	
+	<section id="opinie" class="sekcja-ramka">
+		<h2>Opinie Klientów:</h2>
+		<div id="opinie-lista">
+	
+		</div>
+		<h3>Dodaj swoją opinię:</h3>
+		<form id="opinia-formularz">
+			<label for="opinia">Twoja opinia:</label><br>
+			<textarea id="opinia" name="opinia" rows="4" cols="50"></textarea><br>
+			<button type="submit">Dodaj opinię</button>
+		</form>
+	</section>
+
+	<section id="porady" class="sekcja-ramka">
+		<h2>Porady:</h2>
+		<ul>
+			<li>Jak spakować się na podróż</li>
+			<li>Najlepsze restauracje w podróży</li>
+			<li>Bezpieczeństwo w podróży</li>
+			<li>Jak unikać kulturowych nieporozumień podczas podróży</li>
+			<li>Wskazówki dotyczące rezerwacji biletów lotniczych</li>
+			<li>Jak planować budżet na podróż</li>
+		</ul>
+	</section>
+
+    <footer id="kontakt">
+        <p>Kontakt: email@gmail.com</p>
+    </footer>
+</body>
+</html>
